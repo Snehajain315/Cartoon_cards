@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Playball&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(to left,#921A40,#C75B7A,#D9ABAB,#F4D9D0);
+    color: black;
+    font-family:  "Playball", cursive;
+    user-select: none;
+    position: relative;
+}
+nav{
+    height:50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:ghostwhite;
+    padding-left: 20px;
+    position: sticky;
+    top: 0px;
+    box-shadow: 5px 5px 5px darkgray;
+}
+nav input{
+    width:400px;
+    border-radius: 10px 10px;
+    padding: 5px 5px;
+}
+#SearchBar{
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    list-style: none;
+    margin: 10px;
+}
+nav ul li:hover{
+    cursor: pointer;
+    background-color: rgb(83, 226, 226);
+    width: fit-content;
+    padding: 5px 5px;
+    border-radius: 10px 10px;
+    cursor: pointer;
+}
+#MainBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+@keyframes Drop{
+    from{
+        transform: translateY(-6em);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+
+.cards{
+    height:350px;
+    width:250px;
+    background-color: floralwhite;
+    column-gap: 10px;
+    row-gap: 10px;
+    margin:15px;
+    border-radius: 10px 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    user-select: none;
+    min-width: 250px;
+    animation: Drop var(--t) linear 1;
+    
+}
+
+.cards img{
+    height:230px;
+    width:250px;
+
+}
+.cards h1{
+    font-size: 18px;
+    color: rgb(97, 21, 68);
+    font-family: "Pacifico", cursive;
+}
+.cards p{
+    font-size: 10px;
+    color: rgb(131, 54, 131);
+    text-align: center;
+}
+.cards button{
+    background-color: cornflowerblue;
+    color: white;
+    border: none;
+    border-radius: 10px 10px;
+    padding: 5px 5px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width:768px)
+ {
+   nav{
+    flex-direction: column;
+    height: fit-content;
+    row-gap: 20px;
+   }
+    #SearchBar{
+         width:80%;
+    }
+}
+
